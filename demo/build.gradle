@@ -39,7 +39,6 @@ dependencies {
     compile rootProject.ext.picasso
 
     compile project(':conductor-modules:support')
-    compile project(':conductor-modules:rxlifecycle')
     compile project(':conductor-modules:rxlifecycle2')
     compile project(':conductor-modules:autodispose')
     compile project(':conductor-modules:arch-components-lifecycle')

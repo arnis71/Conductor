@@ -25,7 +25,7 @@ dependencies {
     compile rootProject.ext.rxLifecycle2
     compile rootProject.ext.rxLifecycleAndroid2
 
-    compile project(':conductor')
+    compile project(':konductor')
 }
 
 ext.artifactId = 'conductor-rxlifecycle2'

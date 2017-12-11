@@ -23,7 +23,7 @@ android {
 dependencies {
     compile rootProject.ext.archComopnentsLifecycle
 
-    compile project(':conductor')
+    compile project(':konductor')
 }
 
 ext.artifactId = 'conductor-arch-components-lifecycle'

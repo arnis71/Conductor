@@ -24,7 +24,7 @@ dependencies {
     compile rootProject.ext.rxJava2
     compile rootProject.ext.autodispose
 
-    compile project(':conductor')
+    compile project(':konductor')
 }
 
 ext.artifactId = 'conductor-autodispose'

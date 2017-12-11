@@ -32,7 +32,7 @@ dependencies {
     testCompile rootProject.ext.roboelectric
 
     compile rootProject.ext.supportAppCompat
-    compile project(':conductor')
+    compile project(':konductor')
 
     unmock 'org.robolectric:android-all:4.3_r2-robolectric-0'
 }

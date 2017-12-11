@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.bluelinelabs.conductor.demo.MainActivity">
+    tools:context="com.arnis.konductor.demo.MainActivity">
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -21,7 +21,7 @@
 
     </android.support.design.widget.AppBarLayout>
 
-    <com.bluelinelabs.conductor.ChangeHandlerFrameLayout
+    <com.arnis.konductor.ChangeHandlerFrameLayout
         android:id="@+id/controller_container"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
