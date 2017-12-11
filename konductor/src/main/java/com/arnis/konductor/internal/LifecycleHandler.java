@@ -77,24 +77,29 @@ public class LifecycleHandler extends Fragment implements ActivityLifecycleCallb
     }
 
     @NonNull
-    public Router getRouter(@NonNull ViewGroup container, @Nullable Bundle savedInstanceState) {
+    public Router getRouter(@NonNull ViewGroup container) {
         ActivityHostedRouter router = routerMap.get(getRouterHashKey(container));
         if (router == null) {
             router = new ActivityHostedRouter();
             router.setHost(this, container);
 
-            if (savedInstanceState != null) {
-                Bundle routerSavedState = savedInstanceState.getBundle(KEY_ROUTER_STATE_PREFIX + router.getContainerId());
-                if (routerSavedState != null) {
-                    router.restoreInstanceState(routerSavedState);
-                }
-            }
             routerMap.put(getRouterHashKey(container), router);
         } else {
             router.setHost(this, container);
         }
 
         return router;
+    }
+
+    @Deprecated
+    // TODO: 11/12/2017 should be an extension function for router
+    public static void restoreRouterState(Router router, @Nullable Bundle savedInstanceState) {
+        if (savedInstanceState != null) {
+            Bundle routerSavedState = savedInstanceState.getBundle(KEY_ROUTER_STATE_PREFIX + router.getContainerId());
+            if (routerSavedState != null) {
+                router.restoreInstanceState(routerSavedState);
+            }
+        }
     }
 
     @NonNull

@@ -28,7 +28,7 @@ import io.reactivex.Observable;
 import io.reactivex.functions.Action;
 import io.reactivex.functions.Consumer;
 
-// Shamelessly borrowed from the official RxLifecycle demo by Trello and adapted for Conductor Controllers
+// Shamelessly borrowed from the official RxLifecycle demo by Trello and adapted for Konductor Controllers
 // instead of Activities or Fragments.
 public class RxLifecycle2Controller extends RxController {
 

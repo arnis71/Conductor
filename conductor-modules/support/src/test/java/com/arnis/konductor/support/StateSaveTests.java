@@ -6,7 +6,7 @@ import android.support.annotation.NonNull;
 import android.util.SparseArray;
 import android.widget.FrameLayout;
 
-import com.arnis.konductor.Conductor;
+import com.arnis.konductor.Konductor;
 import com.arnis.konductor.Router;
 import com.arnis.konductor.RouterTransaction;
 import com.arnis.konductor.support.util.FakePager;
@@ -31,7 +31,7 @@ public class StateSaveTests {
 
     public void createActivityController(Bundle savedInstanceState) {
         ActivityController<Activity> activityController = Robolectric.buildActivity(Activity.class).create().start().resume();
-        Router router = Conductor.attachRouter(activityController.get(), new FrameLayout(activityController.get()), savedInstanceState);
+        Router router = Konductor.INSTANCE.attachRouter(activityController.get(), new FrameLayout(activityController.get()), savedInstanceState);
         TestController controller = new TestController();
         router.setRoot(RouterTransaction.with(controller));
 

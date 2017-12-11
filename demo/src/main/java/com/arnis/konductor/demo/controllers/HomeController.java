@@ -127,7 +127,7 @@ public class HomeController extends BaseController {
 
     @Override
     protected String getTitle() {
-        return "Conductor Demos";
+        return "Konductor Demos";
     }
 
     @OnClick(R.id.fab)
@@ -139,7 +139,7 @@ public class HomeController extends BaseController {
         SpannableString details = new SpannableString("A small, yet full-featured framework that allows building View-based Android applications");
         details.setSpan(new AbsoluteSizeSpan(16, true), 0, details.length(), Spanned.SPAN_INCLUSIVE_INCLUSIVE);
 
-        final String url = "https://github.com/bluelinelabs/Conductor";
+        final String url = "https://github.com/bluelinelabs/Konductor";
         SpannableString link = new SpannableString(url);
         link.setSpan(new URLSpan(url) {
             @Override
@@ -157,7 +157,7 @@ public class HomeController extends BaseController {
         ControllerChangeHandler popHandler = fromFab ? new TransitionChangeHandlerCompat(new FabToDialogTransitionChangeHandler(), new FadeChangeHandler()) : new FadeChangeHandler();
 
         getRouter()
-                .pushController(RouterTransaction.with(new DialogController("Conductor", description))
+                .pushController(RouterTransaction.with(new DialogController("Konductor", description))
                         .pushChangeHandler(pushHandler)
                         .popChangeHandler(popHandler));
 

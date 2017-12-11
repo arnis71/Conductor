@@ -5,7 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.ViewGroup;
 
-import com.arnis.konductor.Conductor;
+import com.arnis.konductor.Konductor;
 import com.arnis.konductor.Router;
 import com.arnis.konductor.RouterTransaction;
 import com.arnis.konductor.demo.controllers.HomeController;
@@ -29,7 +29,7 @@ public final class MainActivity extends AppCompatActivity implements ActionBarPr
 
         setSupportActionBar(toolbar);
 
-        router = Conductor.attachRouter(this, container, savedInstanceState);
+        router = Konductor.INSTANCE.attachRouter(this, container, savedInstanceState);
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(new HomeController()));
         }

@@ -8,6 +8,7 @@ buildscript {
 }
 
 apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
 apply plugin: 'de.mobilej.unmock'
 
 android {
@@ -37,10 +38,12 @@ dependencies {
     testCompile rootProject.ext.roboelectric
 
     compile rootProject.ext.supportAnnotations
+    compile rootProject.ext.supportDesign
 
     lintChecks project(path: ':conductor-lint', configuration: 'lintChecks')
 
     unmock 'org.robolectric:android-all:4.3_r2-robolectric-0'
+    compile "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
 }
 
 unMock {
@@ -65,3 +68,6 @@ ext.artifactId = 'conductor'
 
 apply from: rootProject.file('dependencies.gradle')
 apply from: rootProject.file('gradle-mvn-push.gradle')
+repositories {
+    mavenCentral()
+}

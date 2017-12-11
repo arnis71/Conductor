@@ -32,7 +32,7 @@ public class ControllerTests {
 
     public void createActivityController(Bundle savedInstanceState) {
         activityProxy = new ActivityProxy().create(savedInstanceState).start().resume();
-        router = Conductor.attachRouter(activityProxy.getActivity(), activityProxy.getView(), savedInstanceState);
+        router = Konductor.INSTANCE.attachRouter(activityProxy.getActivity(), activityProxy.getView(), savedInstanceState);
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(new TestController()));
         }

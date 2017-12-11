@@ -25,7 +25,7 @@ public class MasterDetailListController extends BaseController {
     private static final String KEY_SELECTED_INDEX = "MasterDetailListController.selectedIndex";
 
     public enum DetailItemModel {
-        ONE("Item 1", "This is a quick demo of master/detail flow using Conductor. In portrait mode you'll see a standard list. In landscape, you'll see a two-pane layout.", R.color.green_300),
+        ONE("Item 1", "This is a quick demo of master/detail flow using Konductor. In portrait mode you'll see a standard list. In landscape, you'll see a two-pane layout.", R.color.green_300),
         TWO("Item 2", "This is another item.", R.color.cyan_300),
         THREE("Item 3", "Wow, a 3rd item!", R.color.deep_purple_300);
 
