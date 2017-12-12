@@ -31,7 +31,7 @@ public class StateSaveTests {
 
     public void createActivityController(Bundle savedInstanceState) {
         ActivityController<Activity> activityController = Robolectric.buildActivity(Activity.class).create().start().resume();
-        Router router = Konductor.INSTANCE.attachRouter(activityController.get(), new FrameLayout(activityController.get()), savedInstanceState);
+        Router router = Konductor.attachRouter(activityController.get(), new FrameLayout(activityController.get()), savedInstanceState);
         TestController controller = new TestController();
         router.setRoot(RouterTransaction.with(controller));
 

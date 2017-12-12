@@ -31,7 +31,7 @@ public class RouterTests {
     @Before
     public void setup() {
         ActivityProxy activityProxy = new ActivityProxy().create(null).start().resume();
-        router = Konductor.INSTANCE.attachRouter(activityProxy.getActivity(), activityProxy.getView(), null);
+        router = Konductor.attachRouter(activityProxy.getActivity(), activityProxy.getView(), null);
     }
 
     @Test

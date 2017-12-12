@@ -38,7 +38,7 @@ public class ControllerLifecycleActivityReferenceTests {
             activityProxy.start().resume();
         }
 
-        router = Konductor.INSTANCE.attachRouter(activityProxy.getActivity(), activityProxy.getView(), savedInstanceState);
+        router = Konductor.attachRouter(activityProxy.getActivity(), activityProxy.getView(), savedInstanceState);
         router.setPopsLastView(true);
         if (!router.hasRootController()) {
             router.setRoot(RouterTransaction.with(new TestController()));
